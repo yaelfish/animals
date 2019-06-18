@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animals</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://a-z-animals.com/images/big_tortoise.png">
+</head>
+<body>
+    <div class="container">
+        <h1>Animals</h1>
+        <form id="form">
+            <div class="inputContainer">
+                <label for="minimalAge">Minimal Age:</label>
+                <input type="number" name="minimalAge" placeholder="Enter minimal number">
+                <button id="minimalBtn">Screen by minimal age</button>
+            </div>
+            <div class="inputContainer">
+                <label for="maximalAge">Maximal Age:</label>
+                <input type="number" name="maximalAge" placeholder="Enter maximal number">
+                <button id="maximalBtn">Screen by maximal age</button>
+            </div>
+            <div class="inputContainer">
+                <button id="ageRangeBtn">Age between minimal and maximal</button>
+            </div> 
+        </form>
+        <select name="dropdown" id="dropdown"></select>
+        <button class="clearFilters">Clear All Filters</button>
+        <div class="animalsTable">
+            <table id="table">
+                <thead>
+                    <tr>
+                        <th>ID Number</th>
+                        <th id="nameTitle">Name</th>
+                        <th>Age</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
