@@ -41,9 +41,7 @@ window.onload = function() {
     // Event Listeners
 
     // Listen to name column header click
-    nameColTitleEl.addEventListener('click', function(){
-        filterDataByName(originalData);
-    });
+    nameColTitleEl.addEventListener('click', () => filterDataByName(originalData));
 
     // Listen to dropdown filter click
     dropdown.addEventListener('mouseup', function(e){
@@ -198,3 +196,23 @@ window.onload = function() {
         displayArray(originalData);
     }
 };
+
+// Practice AJAX 
+
+document.getElementById('button1').addEventListener('click',loadJson);
+
+function loadJson(e) {
+    e.preventDefault();
+    
+    const xhr = new XMLHttpRequest();
+
+    xhr.open('GET', 'animals.json', true);
+
+    xhr.onload = function() {
+        if (this.status === 200){
+            console.log(this.responseText);
+        }
+    }
+
+    xhr.send();
+}
